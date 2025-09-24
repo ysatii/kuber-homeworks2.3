@@ -54,20 +54,22 @@ curl http://$(minikube ip):30080/
 ![рисунок 7](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_7.jpg)  
 
 
-
-
-
-Ingress (HTTPS):
-
+ 
+### Настроить hosts
 echo "$(minikube ip) myapp.example.com" | sudo tee -a /etc/hosts
 curl -vk https://myapp.example.com/
 
-Настроить hosts
-
 Узнать IP Minikube:
-
 minikube ip
-
-
 Добавить в /etc/hosts (нужны root-права):
 echo "$(minikube ip) myapp.example.com" | sudo tee -a /etc/hosts
+
+![рисунок 8](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_8.jpg)  
+![рисунок 9](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_9.jpg)  
+![рисунок 10](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_10.jpg)  
+![рисунок 11](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_11.jpg)  
+![рисунок 12](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_12.jpg)  
+![рисунок 13](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_13.jpg)  
+![рисунок 14](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_14.jpg)  
+
+
