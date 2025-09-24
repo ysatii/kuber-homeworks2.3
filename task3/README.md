@@ -145,13 +145,13 @@ microk8s kubectl delete ns app-demo
 microk8s kubectl get ns  
 ![рисунок 20](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_20.jpg)  
 
-##Манифесты
+## Манифесты
 ### Ссылки на манифесты с сервера  
-[_out_configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_configmap.yaml)
-[_out_deployment.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_deployment.yaml)
-[_out_role.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_role.yaml)
-[_out_rolebinding.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_rolebinding.yaml)
-[_out_service.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_service.yaml)
+[_out_configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_configmap.yaml)  
+[_out_deployment.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_deployment.yaml)  
+[_out_role.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_role.yaml)  
+[_out_rolebinding.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_rolebinding.yaml)  
+[_out_service.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_service.yaml)  
 
 ### configmap
 [configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/configmap.yaml)
