@@ -103,3 +103,102 @@ microk8s kubectl apply -f rolebinding-developer.yaml
 microk8s kubectl -n app-demo get pods --as=developer
 microk8s kubectl -n app-demo logs deploy/web-app -c nginx --as=developer
 microk8s kubectl -n app-demo auth can-i delete pods --as=developer   # должно быть "no"
+
+
+## Посмотреть логи nginx по Pod’у (без доступа к Deployment)
+### получить имя Pod по метке (разрешено ролью)
+microk8s kubectl -n app-demo get pods -l app=web-app --as=developer
+
+### допустим, имя пода web-app-64c58d7d74-h5qlb:
+microk8s kubectl -n app-demo logs pod/web-app-64c58d7d74-h5qlb -c nginx --as=developer
+
+### Или сразу по селектору (тоже не трогает Deployment)
+microk8s kubectl -n app-demo logs -l app=web-app -c nginx --as=developer --tail=100 --prefix=true
+
+Быстрая проверка прав (должно быть «yes» на pods и pods/log)
+microk8s kubectl -n app-demo auth can-i get pods --as=developer
+microk8s kubectl -n app-demo auth can-i get pods/log --as=developer
+microk8s kubectl -n app-demo auth can-i delete pods --as=developer   # ожидаемо: no
+
+
+## Листинги манифестов с сервера
+microk8s kubectl -n app-demo get all -o wide
+
+microk8s kubectl -n app-demo get configmap web-content -o yaml > _out_configmap.yaml
+microk8s kubectl -n app-demo get deploy web-app -o yaml > _out_deployment.yaml
+microk8s kubectl -n app-demo get svc web-svc -o yaml > _out_service.yaml
+microk8s kubectl -n app-demo get role pod-viewer -o yaml > _out_role.yaml
+microk8s kubectl -n app-demo get rolebinding developer-pod-view -o yaml > _out_rolebinding.yaml
+
+Очистка  
+microk8s kubectl delete ns app-demo
+microk8s kubectl get ns
+
+
+![рисунок 15](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_15.jpg)  
+![рисунок 16](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_16.jpg)  
+![рисунок 17](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_17.jpg)  
+![рисунок 18](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_18.jpg)  
+![рисунок 19](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_19.jpg)  
+![рисунок 20](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_20.jpg)  
+
+##Манифесты
+### Ссылки на манифесты с сервера  
+[_out_configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_configmap.yaml)
+[_out_deployment.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_deployment.yaml)
+[_out_role.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_role.yaml)
+[_out_rolebinding.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_rolebinding.yaml)
+[_out_service.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/_out_service.yaml)
+
+### configmap
+[configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/configmap.yaml)
+
+### deployment
+[deployment.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/deployment.yaml)
+
+## Сертификат
+### developer.crt
+[developer.crt](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/developer.crt)
+### developer.csr
+[developer.csr](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/developer.csr)
+### developer.key
+[developer.key](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/developer.key)
+    		
+## Роли
+### читает информацию про поды и логи 
+[role-pod-reader.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/role-pod-reader.yaml)
+[rolebinding-developer.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/rolebinding-developer.yaml)
+
+### сервис nodeport
+[service-nodeport.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/service-nodeport.yaml)
+
+ 
+
+ 
+
+	
+ 
+
+ 
+
+	
+ 
+
+	
+ 
+ 
+
+	
+ 
+
+	
+ 
+
+	
+ 
+l
+	
+ 
+
+	
+ 

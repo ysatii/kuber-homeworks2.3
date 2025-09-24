@@ -63,7 +63,7 @@
 
 ---
 ### Решение 2
-[Вешение 1](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task1)
+[Вешение 2](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task2)
 В решениии приведены необходимы стриншоты и манифесты
 
 ---
@@ -113,6 +113,12 @@ openssl x509 -req -in developer.csr -CA {CA серт вашего кластер
   - `rolebinding-developer.yaml`
 - Команды генерации сертификатов
 - Скриншот проверки прав (`kubectl get pods --as=developer`)
+
+---
+### Решение 3
+[Вешение 3](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task3)
+В решениии приведены необходимы стриншоты и манифесты
+
 
 ---
 ## Шаблоны манифестов с учебными комментариями
