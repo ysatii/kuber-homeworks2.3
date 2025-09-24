@@ -1,4 +1,4 @@
-# Домашнее задание к занятию «Настройка приложений и управление доступом в Kubernetes»
+# Домашнее задание к занятию «Настройка приложений и управление доступом в Kubernetes» - Мельник Юрий Александрович
 
 ### Примерное время выполнения задания
 
@@ -63,7 +63,7 @@
 
 ---
 ### Решение 1   
-[Вешение 1](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task1)  
+[Решение 1](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task1)  
 В решениии приведены необходимы стриншоты и манифесты  
 
 ---
@@ -122,7 +122,7 @@ openssl x509 -req -in developer.csr -CA {CA серт вашего кластер
 
 ---
 ### Решение 3  
-[Вешение 3](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task3)  
+[Решение 3](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task3)  
 В решениии приведены необходимы стриншоты и манифесты  
 
 
