@@ -90,7 +90,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 ---
 ### Решение 2   
-[Вешение 2](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task2)  
+[Решение 2](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task2)  
 В решениии приведены необходимы стриншоты и манифесты  
 
 ---
