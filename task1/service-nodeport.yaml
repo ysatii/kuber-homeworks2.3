@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc-nodeport
+  namespace: app-demo
+spec:
+  selector:
+    app: web-app
+  ports:
+  - protocol: TCP
+    port: 80        # внутренний порт сервиса
+    targetPort: 80  # порт контейнера nginx
+    nodePort: 30080 # внешний порт ноды (можешь изменить в диапазоне 30000–32767)
+  type: NodePort
