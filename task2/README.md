@@ -73,17 +73,17 @@ echo "$(minikube ip) myapp.example.com" | sudo tee -a /etc/hosts
 ![рисунок 14](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_14.jpg)  
 
 
-Манифесты 
+## Манифесты  
 [configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/configmap.yaml)  
 [deployment.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/deployment.yaml)  
 [ingress-tls.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/ingress-tls.yaml)  
 [ingress-tls.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/ingress-tls.yaml)  
 [service-nodeport.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/service-nodeport.yaml) 
  
-Сертификаты
-[tls.crt](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/tls.crt) 
-[tls.key](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/tls.key) 
+## Сертификаты   
+[tls.crt](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/tls.crt)  
+[tls.key](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task2/tls.key)  
 
-
-kubectl delete ns app-demo
-kubectl get ns
+### Удаляем то что было создано
+kubectl delete ns app-demo  
+kubectl get ns  

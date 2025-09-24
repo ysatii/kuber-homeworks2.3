@@ -28,7 +28,7 @@ openssl x509 -req -in developer.csr -CA {CA серт вашего кластер
 
 ## Решение 3
 
-### Подготовка MicroK8s (без ingress)
+### Подготовка MicroK8s (на основе задания 2 без ingress)
 ### (один раз) добавить себя в группу и перелогиниться
 sudo usermod -aG microk8s $USER
 sudo chown -R $USER ~/.kube || true
@@ -168,9 +168,9 @@ microk8s kubectl get ns
 [developer.key](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/developer.key)
     		
 ## Роли
-### читает информацию про поды и логи 
-[role-pod-reader.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/role-pod-reader.yaml)
-[rolebinding-developer.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/rolebinding-developer.yaml)
+### читает информацию про поды и логи  
+[role-pod-reader.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/role-pod-reader.yaml)  
+[rolebinding-developer.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/rolebinding-developer.yaml)  
 
 ### сервис nodeport
 [service-nodeport.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task3/service-nodeport.yaml)
