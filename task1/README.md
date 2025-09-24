@@ -39,6 +39,7 @@ kubectl -n app-demo exec -it "$POD" -c multitool -- sh -lc '
   echo "----";
   curl -s http://127.0.0.1:80/
 '
+![рисунок 1](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_1.jpg)
 
 получили ответ от контейнера nginx! все в работе!  
 
@@ -50,6 +51,7 @@ kubectl -n app-demo get svc web-svc
 kubectl -n app-demo port-forward svc/web-svc 8080:80
 в браузере запускаем
 localhost:8080/  
+![рисунок 2](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_2.jpg)
 
 ### можем провести проверку создав сервис типа nodeport
 kubectl apply -f service-nodeport.yaml  
@@ -59,13 +61,14 @@ kubectl get nodes -o wide
 
 curl http://192.168.49.2:30080/
 
+![рисунок 3](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_3.jpg)
+![рисунок 4](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_4.jpg)
+![рисунок 5](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_5.jpg)
 
 ### удаляем все что создали
 kubectl delete ns app-demo
 kubectl get ns
 
-![рисунок 1](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_1.jpg)
-![рисунок 2](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_2.jpg)
-![рисунок 3](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_3.jpg)
-![рисунок 4](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_4.jpg)
-![рисунок 5](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_5.jpg)
+
+
+
