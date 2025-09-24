@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"name":"developer-pod-view","namespace":"app-demo"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"pod-viewer"},"subjects":[{"apiGroup":"rbac.authorization.k8s.io","kind":"User","name":"developer"}]}
+  creationTimestamp: "2025-09-24T15:13:23Z"
+  name: developer-pod-view
+  namespace: app-demo
+  resourceVersion: "2404594"
+  uid: 6a972d28-c569-4383-8301-fdfa1ffbdbab
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pod-viewer
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: developer

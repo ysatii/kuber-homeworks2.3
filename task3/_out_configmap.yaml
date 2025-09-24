@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  index.html: |
+    <html>
+      <head><title>K8s demo</title></head>
+      <body>
+        <h1>Hello from nginx on Kubernetes!</h1>
+      </body>
+    </html>
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"index.html":"\u003chtml\u003e\n  \u003chead\u003e\u003ctitle\u003eK8s demo\u003c/title\u003e\u003c/head\u003e\n  \u003cbody\u003e\n    \u003ch1\u003eHello from nginx on Kubernetes!\u003c/h1\u003e\n  \u003c/body\u003e\n\u003c/html\u003e\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"web-content","namespace":"app-demo"}}
+  creationTimestamp: "2025-09-24T15:01:28Z"
+  name: web-content
+  namespace: app-demo
+  resourceVersion: "2402829"
+  uid: 85c57a39-0571-4ea6-91d9-2236489855d3
