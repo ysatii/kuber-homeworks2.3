@@ -37,24 +37,21 @@ kubectl apply -f service-nodeport.yaml
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout tls.key -out tls.crt -subj "/CN=myapp.example.com"
 
-
-
-### преобразуем сертиффикаты в base64
+преобразуем сертиффикаты в base64
 cat tls.crt | base64 -w0
 cat tls.key | base64 -w0
 
-![рисунок 6](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_6.jpg)
-kubectl apply -f secret-tls.yaml
+![рисунок 6](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_6.jpg)  
+kubectl apply -f secret-tls.yaml  
 
-
+### подымаем ingress-tls контроллер
 kubectl apply -f ingress-tls.yaml
 kubectl -n app-demo get ingress web-ing
 
  Проверка
-
 NodePort (браузер напрямую):
-
 curl http://$(minikube ip):30080/
+![рисунок 7](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_7.jpg)  
 
 
 
