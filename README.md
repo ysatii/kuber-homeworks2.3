@@ -62,9 +62,9 @@
 - Скриншот вывода `curl` или браузера
 
 ---
-### Решение 2
-[Вешение 2](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task2)
-В решениии приведены необходимы стриншоты и манифесты
+### Решение 1   
+[Вешение 1](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task1)  
+В решениии приведены необходимы стриншоты и манифесты  
 
 ---
 
@@ -89,6 +89,12 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 - Скриншот вывода `curl -k`
 
 ---
+### Решение 2   
+[Вешение 2](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task2)  
+В решениии приведены необходимы стриншоты и манифесты  
+
+---
+
 ## **Задание 3: Настройка RBAC**  
 ### **Задача**  
 Создать пользователя с ограниченными правами (только просмотр логов и описания подов).
@@ -115,9 +121,9 @@ openssl x509 -req -in developer.csr -CA {CA серт вашего кластер
 - Скриншот проверки прав (`kubectl get pods --as=developer`)
 
 ---
-### Решение 3
-[Вешение 3](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task3)
-В решениии приведены необходимы стриншоты и манифесты
+### Решение 3  
+[Вешение 3](https://github.com/ysatii/kuber-homeworks2.3/tree/main/task3)  
+В решениии приведены необходимы стриншоты и манифесты  
 
 
 ---
