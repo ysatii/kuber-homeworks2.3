@@ -69,6 +69,13 @@ curl http://192.168.49.2:30080/
 kubectl delete ns app-demo
 kubectl get ns
 
+Манифеситы 
+[configmap.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task1/configmap.yaml)
+[deployment.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task1/deployment.yaml)
+[service-nodeport.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task1/service-nodeport.yaml)
+[service.yaml](https://github.com/ysatii/kuber-homeworks2.3/blob/main/task1/service.yaml)
+
+
 
 
 
