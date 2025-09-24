@@ -30,16 +30,20 @@ kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service-nodeport.yaml
 
-![рисунок 6](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_6.jpg)
+
 
 
 ### работаем с сертификатом 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout tls.key -out tls.crt -subj "/CN=myapp.example.com"
 
+
+
 ### преобразуем сертиффикаты в base64
 cat tls.crt | base64 -w0
 cat tls.key | base64 -w0
+
+![рисунок 6](https://github.com/ysatii/kuber-homeworks2.3/blob/main/img/img_6.jpg)
 kubectl apply -f secret-tls.yaml
 
 
